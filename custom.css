@@ -1,0 +1,16 @@
+/* @font-face{
+    font-family: ganganee;
+    src:url('./fonts/un-ganganee.ttf');
+    }
+     */
+
+     
+body{
+    font-family: 'Open Sans', sans-serif, ganganee;
+    font-weight: 400;
+    background: rgb(252, 250, 245);
+}
+
+.text-shoutout{
+    color: #00aeff;
+}
