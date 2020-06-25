@@ -8,74 +8,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="custom.css">
-    <title>Salute the Real Heroes | ShoutOUT AI</title>
+    <title>ShoutOUT AI | Demo Landing Page </title>
 </head>
 
 <body>
-    <div class="container h-100">
-        <div class="row h-75 my-5">
-            <div class="col-md-6 col-sm-12 my-auto order-lg-2">
-                <img src="images/header-main.png" class="img-fluid" />
-            </div>
-            <div class="col-md-6 col-sm-12 my-auto order-lg-1 text-lg-left text-center">
-                <h1 id='text-english' class='mb-4 text-lg-left text-center text-english d-none'>"We are all home for the
-                    <strong class="text-shoutout">New Year</strong>. They are <strong class="text-shoutout">NOT!</strong>"</h1>
-                <h1 id='text-sinhala' class="mb-4 text-lg-left text-center ">"අපි හැමෝම <span class="text-shoutout">අවුරුද්දට</span> ගෙදර උනාට, එයාලා හැමෝම <span class="text-shoutout">වැඩ</span>"</h1>
-                <h2 id='text-tamil' class='mb-4 text-lg-left text-center font-weight-bold d-none'>"இந்தப் <strong class="text-shoutout">புத்தாண்டில்</strong>  நாங்கள் அனைவரும் வீட்டில். ஆனால் அவர்கள் அனைவரும் <strong class="text-shoutout">சேவையில்!</strong>"</h2>
-
-                <a  class="btn btn-dark border-0 rounded-0" href="https://covid19.shoutout.ai">Send a Wish</a>
+    <div class="container-fluid h-100">
+        <div class="row mx-5 mt-5">
+            <div class="d-flex w-100">
+                <div class="logo mr-auto"></div>
+                <div class="icon mr-2"></div>
+                <div class="icon"></div>
             </div>
         </div>
-        <div class="card-columns" id='mydiv'>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col">
-                <div class="m-3 p-3 d-flex justify-content-center align-items-center">
-                    <p class="mb-0 mr-2 font-weight-bold">Powered by</p> <img src="images/shoutout-logo.svg"
-                        class="img-fluid" />
-                </div>
+        <div class="row h-75 mx-5 mt-3">
+            <div class="cover">
+                <div class="title mx-auto margin-top-xl"></div>
+                <div class="subtitle mx-auto mt-3"></div>
+                <div class="button mx-auto mt-4"></div>
             </div>
+        </div>
+        <div class="row mx-5 mt-3">
+            <div class="subheading mx-auto mt-3"></div>
+            <br>
+            <div class="tagline mx-auto mt-3"></div>
+        </div>
+        <div class="row mx-5 mt-3">
+         <div class="d-flex">
+             <div class="box">
+                 <img class="img-fluid" src="images/picture.png" alt="">
+             </div>
+             <div class="box">
+                <img class="img-fluid" src="images/picture.png" alt="">
+            </div>
+            <div class="box">
+                <img class="img-fluid" src="images/picture.png" alt="">
+            </div>
+         </div>
         </div>
     </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
 
-
-    $(document).ready(function () {
-        $.get("https://api.shoutout.ai/covidresponse/greetings", function (data, status) {
-            if (data.length > 0) {
-                $.each(data, function (index, wish) {
-                    document.getElementById("mydiv").innerHTML += "<div  id='" + index + "' class='card border-0 rounded-0 shadow p-4 mb-3'><p class='mb-0'>" + wish + "</p></div>";
-                })
-            }
-        })
-    })
-
-    var counter = 0;
-    function headerChanger() {
-        console.log("Timer", counter);
-        if (counter <= 2) {
-            if (counter === 0) {
-                $('#text-sinhala').addClass('d-none')
-                $("#text-tamil").removeClass('d-none');
-            }
-            if (counter === 1) {
-                $('#text-tamil').addClass('d-none')
-                $("#text-english").removeClass('d-none');
-            }
-            if (counter === 2) {
-                $('#text-english').addClass('d-none')
-                $("#text-sinhala").removeClass('d-none');
-            }
-            counter++;
-        }
-        if (counter === 3) {
-            counter = 0;
-        }
-    };
-
-    setInterval(headerChanger, 2500);
-</script>
 
 </html>
