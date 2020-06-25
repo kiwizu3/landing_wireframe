@@ -8,7 +8,11 @@
 body{
     font-family: 'Open Sans', sans-serif, ganganee;
     font-weight: 400;
-    background: #fff;
+    background: #e4e6ea;
+}
+
+.bg-color{
+    background-color: #fff;
 }
 
 .text-shoutout{
@@ -16,10 +20,7 @@ body{
 }
 
 .logo{
-    width: 15rem;
-    height: 3rem;
-    border-radius: 4rem;
-    background-color: #f0f2f6;
+    filter: grayscale(100%);
 }
 
 .icon{
